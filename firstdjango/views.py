@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 # สร้างฟังก์ชันสำหรับไว้เรียกที่ URL ที่เราสร้างไว้
+from django.shortcuts import render
 def index(request):
-    return HttpResponse("Hello, world. You're at the firstdjango index.")
+    return render(request,'index.html')
 
 
 def about(request):
