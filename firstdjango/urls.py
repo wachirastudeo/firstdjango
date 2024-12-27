@@ -19,6 +19,11 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('', views.index, name='index'),
+    path('about', views.about, name='about'),
+    # parameters
+    path('search/<str:keyword>/<int:page>', views.search, name='search'),
+    # query string
+    path('map', views.map, name='map'),
     path('admin/', admin.site.urls),
 
 ]
